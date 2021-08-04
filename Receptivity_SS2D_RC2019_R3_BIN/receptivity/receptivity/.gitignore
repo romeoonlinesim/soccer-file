@@ -1,0 +1,10 @@
+*.o
+src/sample_coach
+src/sample_player
+src/sample_trainer
+.vscode/settings.json
+utils/learning/PredictionTests/*Results/
+*.pyc
+src/.deps/*
+src/*.Po
+.vscode/

@@ -1,0 +1,36 @@
+#!/bin/sh
+HOST=$1
+BASEDIR=$2
+NUM=$3
+LIBPATH="./lib/"
+if [ x"$LIBPATH" != x ]; then
+  if [ x"$LD_LIBRARY_PATH" = x ]; then
+    LD_LIBRARY_PATH=$LIBPATH
+  else
+    LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
+  fi
+  export LD_LIBRARY_PATH
+fi
+HOMEDIR=`dirname $0`
+teamname="ITAndroids"
+player="/home/nh16/Downloads/ITAndroids_SS2D_RC2019_R3_BIN/itandroids/binaries/ITAndroids_player"
+coach="${HOMEDIR}/binaries/ITAndroids_coach"
+config="${HOMEDIR}/source/player.conf"
+config_dir="${HOMEDIR}/source/formations-dt"
+coach_config="${HOMEDIR}/source/coach.conf"
+opt="--player-config ${config} --config_dir ${config_dir}"
+opt="${opt} -h ${HOST} -t ${teamname}"
+coachopt="--coach-config ${coach_config}"
+coachopt="${coachopt} -h ${HOST} -t ${teamname}"
+cd $BASEDIR
+case $NUM in
+    1)
+        $player $opt -g
+        ;;
+    12)
+        $coach $coachopt
+        ;;
+    *)
+        $player $opt
+        ;;
+esac

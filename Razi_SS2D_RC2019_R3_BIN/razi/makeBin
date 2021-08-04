@@ -1,0 +1,34 @@
+#!/bin/bash
+
+LIB_DIR=$1
+SOURCE_DIR=$2
+BIN=$3
+
+cp start $BIN
+cp kill $BIN
+cp startAll $BIN
+
+cd $LIB_DIR
+
+make clean
+make distclean
+
+./configure --prefix=$BIN/LIB
+make -j2
+make install
+
+cd $SOURCE_DIR
+
+make clean
+make distclean
+
+./configure --with-librcsc=$BIN/LIB
+make -j2
+
+cd src
+
+cp sample_player $BIN
+cp sample_coach $BIN
+cp -r formations-dt/ $BIN
+cp coach.conf $BIN
+cp player.conf $BIN

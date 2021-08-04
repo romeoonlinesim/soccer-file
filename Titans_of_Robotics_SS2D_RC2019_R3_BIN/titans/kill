@@ -1,0 +1,12 @@
+#!/bin/sh
+
+player="asimov_player"
+coach="asimov_coach"
+
+killall -TERM ${player}
+killall -TERM ${coach}
+
+sleep 2
+
+killall -KILL ${player}
+killall -KILL ${coach}

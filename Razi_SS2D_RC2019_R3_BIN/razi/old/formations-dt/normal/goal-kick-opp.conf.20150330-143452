@@ -1,0 +1,14 @@
+Formation Static 0
+1 Goalie -49 0
+2 CenterBack 0 -5
+3 CenterBack 0 5
+4 SideBack 0 -12
+5 SideBack 0 12
+6 DefensiveHalf 10 0
+7 OffensiveHalf 15 -12
+8 OffensiveHalf 15 12
+9 SideForward 31 -17.5
+10 SideForward 31 17.5
+11 CenterForward 31 0
+Begin Samples 2 0
+End Samples

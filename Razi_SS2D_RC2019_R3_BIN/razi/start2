@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for ((i = 7; i < 13; i++))
+do
+./start $1 . $i &
+sleep 0.5
+done

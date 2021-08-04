@@ -1,0 +1,43 @@
+#!/bin/sh
+
+HOST=$1
+BASEDIR=$2
+NUM=$3
+
+LIBPATH=/home/hillstone/local/lib
+if [ x"$LIBPATH" != x ]; then
+  if [ x"$LD_LIBRARY_PATH" = x ]; then
+    LD_LIBRARY_PATH=$LIBPATH
+  else
+    LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
+  fi
+  export LD_LIBRARY_PATH
+fi
+
+player="./HillStone2019/src/sample_player"
+coach="./HillStone2019/src/sample_coach"
+teamname="HillStone"
+coach_conf="./HillStone2019/src/coach.conf"
+player_conf="./HillStone2019/src/player.conf"
+config_dir="./HillStone2019/src/formations-dt"
+
+
+opt="--player-config ${player_conf} --config_dir ${config_dir}"
+opt="${opt} -h ${HOST} -t ${teamname}"
+
+coachopt="--coach-config ${coach_conf}"
+coachopt="${coachopt} -h ${HOST} -t ${teamname} --use_team_graphic on"
+
+cd $BASEDIR
+
+case $NUM in
+    1)
+        $player $opt -g
+        ;;
+    12)
+        $coach $coachopt
+        ;;
+    *)
+        $player $opt
+        ;;
+esac

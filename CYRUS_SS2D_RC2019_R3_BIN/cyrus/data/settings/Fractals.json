@@ -1,0 +1,25 @@
+{
+	"Strategy":	{
+				"Formation":	{
+							"Win":"550",
+							"Lost":"550",
+							"Draw":"550"
+						},
+				"Is5ForwardWin":false,
+				"Is5ForwardLost":true,
+				"Is5ForwardDraw":false,
+				"TeamTactic":"AllDef",
+				"IsGoalForward":false
+			},
+	"ChainAction":	{
+				"ChainNodeNumber":750,
+				"ChainDeph":3,
+				"UseShootSafe":false
+			},
+	"OffensiveMove":{
+				"Is9BrokeOffside":false
+			},
+	"DeffenseMove": {
+				"PassBlock":false
+			}
+}

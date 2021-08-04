@@ -1,0 +1,7 @@
+به روش زیر عمل کنید:
+
+در ترمینال اسکریپت makeBin را به صورت زیر اجرا کنید:
+./makeBin "libRCSC directory" "team source directory" "destination directory for the final binary"
+برای مثال:
+./makeBin /home/sim/Downloads/librcsc-4.1.0/ /home/sim/Desktop/agent2d-3.1.1/ /home/sim/Desktop/final_binary/
+

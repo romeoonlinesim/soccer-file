@@ -1,0 +1,15 @@
+Formation Static
+# ---------------------------------------------------------
+# for our goalie catch
+ 1 Goalie         -48.0   0.0
+ 2 CenterBack     -35.0  -4.0
+ 3 CenterBack     -35.0   4.0
+ 4 SideBack       -35.0 -14.0
+ 5 SideBack       -35.0  14.0
+ 6 DefensiveHalf  -26.5   0.0
+ 7 OffensiveHalf  -10 -23.5
+ 8 OffensiveHalf  -10  23.5
+ 9 SideForward    5.0 -27.0
+10 SideForward    5.0  27.0
+11 CenterForward  8.0   0.0
+# ---------------------------------------------------------

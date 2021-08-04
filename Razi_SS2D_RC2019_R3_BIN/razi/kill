@@ -1,0 +1,12 @@
+#!/bin/sh
+
+player="Razi_player"
+coach="Razi_coach"
+
+killall -TERM ${player}
+killall -TERM ${coach}
+
+sleep 2
+
+killall -KILL ${player}
+killall -KILL ${coach}
